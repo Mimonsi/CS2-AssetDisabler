@@ -1,0 +1,9 @@
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\bin\Debug\net48\AssetDisabler.dll
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\bin\Debug\net48\AssetDisabler.pdb
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\obj\Debug\net48\AssetDisabler.csproj.AssemblyReference.cache
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\obj\Debug\net48\AssetDisabler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\obj\Debug\net48\AssetDisabler.AssemblyInfoInputs.cache
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\obj\Debug\net48\AssetDisabler.AssemblyInfo.cs
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\obj\Debug\net48\AssetDisabler.csproj.CoreCompileInputs.cache
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\obj\Debug\net48\AssetDisabler.dll
+C:\Users\Konsi\Documents\CS2-Modding\CS2-AssetDisabler\obj\Debug\net48\AssetDisabler.pdb
