@@ -1,4 +1,4 @@
-﻿using Colossal.Logging;
+using Colossal.Logging;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
@@ -9,7 +9,7 @@ namespace AssetDisabler
     public class Mod : IMod
     {
         public static ILog log = LogManager.GetLogger($"{nameof(AssetDisabler)}.{nameof(Mod)}").SetShowsErrorsInUI(false);
-        private Setting m_Setting;
+        public static Setting Setting { get; private set; }
 
         public void OnLoad(UpdateSystem updateSystem)
         {
@@ -17,24 +17,22 @@ namespace AssetDisabler
 
             if (GameManager.instance.modManager.TryGetExecutableAsset(this, out var asset))
                 log.Info($"Current mod asset at {asset.path}");
-            
+
+            Setting = new Setting(this);
+            Setting.RegisterInOptionsUI();
+            GameManager.instance.localizationManager.AddSource("en-US", new LocaleEN(Setting));
+            AssetDatabase.global.LoadSettings(nameof(AssetDisabler), Setting, new Setting(this));
+
             updateSystem.UpdateAt<AssetDisablerSystem>(SystemUpdatePhase.MainLoop);
-
-            //m_Setting = new Setting(this);
-            //m_Setting.RegisterInOptionsUI();
-            //GameManager.instance.localizationManager.AddSource("en-US", new LocaleEN(m_Setting));
-
-
-            //AssetDatabase.global.LoadSettings(nameof(AssetDisabler), m_Setting, new Setting(this));
         }
 
         public void OnDispose()
         {
             log.Info(nameof(OnDispose));
-            if (m_Setting != null)
+            if (Setting != null)
             {
-                m_Setting.UnregisterInOptionsUI();
-                m_Setting = null;
+                Setting.UnregisterInOptionsUI();
+                Setting = null;
             }
         }
     }
