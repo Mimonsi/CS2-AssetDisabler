@@ -157,7 +157,7 @@ namespace AssetDisabler
         {
             var dict = new Dictionary<string, string>
             {
-                { m_Setting.GetSettingsLocaleID(), "Asset Disabler" },
+                { m_Setting.GetSettingsLocaleID(), "Asset Disabler (Beta)" },
 
                 { m_Setting.GetOptionTabLocaleID(Setting.kPersonalCarsTab), "Personal Cars" },
                 { m_Setting.GetOptionTabLocaleID(Setting.kTrainsTab), "Trains" },
@@ -194,7 +194,7 @@ namespace AssetDisabler
                 {
                     dict[m_Setting.GetOptionLabelLocaleID(entry.SettingPropertyName)] = entry.DisplayName;
                     dict[m_Setting.GetOptionDescLocaleID(entry.SettingPropertyName)] =
-                        $"When unchecked, the vanilla prefab \"{entry.PrefabName}\" will be removed at game start.";
+                        $"When unchecked, the vanilla prefab \"{entry.PrefabName}\" will be removed. Requires a game restart to take effect.";
                 }
             }
 

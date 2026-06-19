@@ -21,12 +21,31 @@ namespace AssetDisabler
         }
 
         // Prefab types to try when resolving a prefab name. The game stores
-        // different vehicle classes under different prefab types; we try each
-        // until one resolves.
+        // different vehicle classes under different concrete prefab types
+        // (see Game.Prefabs.* in the game source); we try each until one
+        // resolves. Vanilla prefab names are unique across these types.
+        //
+        // Current categories use:
+        //   CarPrefab                    -> Car*, MuscleCar*, Van*, Motorbike*, Scooter*, ElectricScooter*
+        //   CarTrailerPrefab             -> CarTrailer*, CamperTrailer*
+        //   BicyclePrefab                -> Bicycle*
+        //   TrainEnginePrefab            -> *TrainPassengerEngine*, *TrainCargoEngine*
+        //   TrainCarPrefab               -> Train*Car*
+        //   MultipleUnitTrainFrontPrefab -> TramEngine*, SubwayEngine*
+        //   MultipleUnitTrainCarPrefab   -> TramCar*, SubwayCar*
+        //
+        // Future categories can reuse this list; add new types as needed
+        // (e.g. AirplanePrefab, HelicopterPrefab, WatercraftPrefab,
+        //  AnimalPrefab, CitizenPrefab).
         public static readonly string[] PrefabTypeCandidates =
         {
             "CarPrefab",
-            "RollingStockPrefab",
+            "CarTrailerPrefab",
+            "BicyclePrefab",
+            "TrainEnginePrefab",
+            "TrainCarPrefab",
+            "MultipleUnitTrainFrontPrefab",
+            "MultipleUnitTrainCarPrefab",
         };
 
         public static readonly List<Category> Categories = new List<Category>
