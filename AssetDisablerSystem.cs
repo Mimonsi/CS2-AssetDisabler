@@ -35,7 +35,7 @@ namespace AssetDisabler
             {
                 foreach (var entry in category.Entries)
                 {
-                    if (setting.GetDisabled(entry.SettingPropertyName))
+                    if (!setting.IsEnabled(entry.SettingPropertyName))
                         toRemove.Add(entry.PrefabName);
                 }
             }

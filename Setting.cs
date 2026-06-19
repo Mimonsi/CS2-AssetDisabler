@@ -23,105 +23,107 @@ namespace AssetDisabler
 
         public Setting(IMod mod) : base(mod) { }
 
+        // Semantics: checked = enabled (default). Unchecked = the prefab will be removed.
+
         // =====================================================================
         // Personal Cars
         // =====================================================================
 
         [SettingsUISection(kPersonalCarsTab, kActionsGroup)]
-        public bool DisableAllPersonalCars { set => SetCategory("PersonalCars", true); }
+        public bool EnableAllPersonalCars { set => SetCategory("PersonalCars", true); }
 
         [SettingsUISection(kPersonalCarsTab, kActionsGroup)]
-        public bool EnableAllPersonalCars { set => SetCategory("PersonalCars", false); }
+        public bool DisableAllPersonalCars { set => SetCategory("PersonalCars", false); }
 
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car01 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car02 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car03 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car04 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car05 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car06 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car07 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car08 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car09 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Car10 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_MuscleCar01 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_MuscleCar02 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_MuscleCar03 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_MuscleCar04 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_MuscleCar05 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Van01 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Motorbike01 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Motorbike02 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Scooter01 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_ElectricScooter01 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Bicycle01 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Bicycle02 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_Bicycle03 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_CarTrailer01 { get; set; }
-        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Disable_CamperTrailer01 { get; set; }
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car01 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car02 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car03 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car04 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car05 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car06 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car07 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car08 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car09 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Car10 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_MuscleCar01 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_MuscleCar02 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_MuscleCar03 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_MuscleCar04 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_MuscleCar05 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Van01 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Motorbike01 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Motorbike02 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Scooter01 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_ElectricScooter01 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Bicycle01 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Bicycle02 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_Bicycle03 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_CarTrailer01 { get; set; } = true;
+        [SettingsUISection(kPersonalCarsTab, kPrefabsGroup)] public bool Enable_CamperTrailer01 { get; set; } = true;
 
         // =====================================================================
         // Trains
         // =====================================================================
 
         [SettingsUISection(kTrainsTab, kActionsGroup)]
-        public bool DisableAllTrains { set => SetCategory("Trains", true); }
+        public bool EnableAllTrains { set => SetCategory("Trains", true); }
 
         [SettingsUISection(kTrainsTab, kActionsGroup)]
-        public bool EnableAllTrains { set => SetCategory("Trains", false); }
+        public bool DisableAllTrains { set => SetCategory("Trains", false); }
 
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_EU_TrainPassengerEngine01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_NA_TrainPassengerEngine01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_EU_TrainCargoEngine01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_NA_TrainCargoEngine01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_EU_TrainPassengerCar01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_NA_TrainPassengerCar01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_TrainCargoCar01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_TrainForestryCar01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_TrainOreCar01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_TrainAgricultureCar01 { get; set; }
-        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Disable_TrainOilCar01 { get; set; }
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_EU_TrainPassengerEngine01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_NA_TrainPassengerEngine01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_EU_TrainCargoEngine01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_NA_TrainCargoEngine01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_EU_TrainPassengerCar01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_NA_TrainPassengerCar01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_TrainCargoCar01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_TrainForestryCar01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_TrainOreCar01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_TrainAgricultureCar01 { get; set; } = true;
+        [SettingsUISection(kTrainsTab, kPrefabsGroup)] public bool Enable_TrainOilCar01 { get; set; } = true;
 
         // =====================================================================
         // Trams
         // =====================================================================
 
         [SettingsUISection(kTramsTab, kActionsGroup)]
-        public bool DisableAllTrams { set => SetCategory("Trams", true); }
+        public bool EnableAllTrams { set => SetCategory("Trams", true); }
 
         [SettingsUISection(kTramsTab, kActionsGroup)]
-        public bool EnableAllTrams { set => SetCategory("Trams", false); }
+        public bool DisableAllTrams { set => SetCategory("Trams", false); }
 
-        [SettingsUISection(kTramsTab, kPrefabsGroup)] public bool Disable_TramEngine01 { get; set; }
-        [SettingsUISection(kTramsTab, kPrefabsGroup)] public bool Disable_TramEngineCO01 { get; set; }
-        [SettingsUISection(kTramsTab, kPrefabsGroup)] public bool Disable_TramCar01 { get; set; }
-        [SettingsUISection(kTramsTab, kPrefabsGroup)] public bool Disable_TramCarCO01 { get; set; }
+        [SettingsUISection(kTramsTab, kPrefabsGroup)] public bool Enable_TramEngine01 { get; set; } = true;
+        [SettingsUISection(kTramsTab, kPrefabsGroup)] public bool Enable_TramEngineCO01 { get; set; } = true;
+        [SettingsUISection(kTramsTab, kPrefabsGroup)] public bool Enable_TramCar01 { get; set; } = true;
+        [SettingsUISection(kTramsTab, kPrefabsGroup)] public bool Enable_TramCarCO01 { get; set; } = true;
 
         // =====================================================================
         // Subways
         // =====================================================================
 
         [SettingsUISection(kSubwaysTab, kActionsGroup)]
-        public bool DisableAllSubways { set => SetCategory("Subways", true); }
+        public bool EnableAllSubways { set => SetCategory("Subways", true); }
 
         [SettingsUISection(kSubwaysTab, kActionsGroup)]
-        public bool EnableAllSubways { set => SetCategory("Subways", false); }
+        public bool DisableAllSubways { set => SetCategory("Subways", false); }
 
-        [SettingsUISection(kSubwaysTab, kPrefabsGroup)] public bool Disable_SubwayEngine01 { get; set; }
-        [SettingsUISection(kSubwaysTab, kPrefabsGroup)] public bool Disable_SubwayCar01 { get; set; }
+        [SettingsUISection(kSubwaysTab, kPrefabsGroup)] public bool Enable_SubwayEngine01 { get; set; } = true;
+        [SettingsUISection(kSubwaysTab, kPrefabsGroup)] public bool Enable_SubwayCar01 { get; set; } = true;
 
         // =====================================================================
         // Helpers
         // =====================================================================
 
-        public bool GetDisabled(string propertyName)
+        public bool IsEnabled(string propertyName)
         {
             var pi = typeof(Setting).GetProperty(propertyName, BindingFlags.Public | BindingFlags.Instance);
             if (pi == null || pi.PropertyType != typeof(bool) || pi.GetGetMethod() == null)
-                return false;
+                return true;
             return (bool)pi.GetValue(this);
         }
 
-        private void SetDisabled(string propertyName, bool value)
+        private void SetEnabled(string propertyName, bool value)
         {
             var pi = typeof(Setting).GetProperty(propertyName, BindingFlags.Public | BindingFlags.Instance);
             if (pi == null || pi.PropertyType != typeof(bool) || pi.GetSetMethod() == null)
@@ -129,12 +131,12 @@ namespace AssetDisabler
             pi.SetValue(this, value);
         }
 
-        private void SetCategory(string categoryKey, bool disabled)
+        private void SetCategory(string categoryKey, bool enabled)
         {
             var category = PrefabCatalog.Categories.Find(c => c.Key == categoryKey);
             if (category == null) return;
             foreach (var entry in category.Entries)
-                SetDisabled(entry.SettingPropertyName, disabled);
+                SetEnabled(entry.SettingPropertyName, enabled);
             ApplyAndSave();
         }
 
@@ -142,7 +144,7 @@ namespace AssetDisabler
         {
             foreach (var category in PrefabCatalog.Categories)
                 foreach (var entry in category.Entries)
-                    SetDisabled(entry.SettingPropertyName, false);
+                    SetEnabled(entry.SettingPropertyName, true);
         }
     }
 
@@ -165,25 +167,25 @@ namespace AssetDisabler
                 { m_Setting.GetOptionGroupLocaleID(Setting.kActionsGroup), "Actions" },
                 { m_Setting.GetOptionGroupLocaleID(Setting.kPrefabsGroup), "Prefabs" },
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.DisableAllPersonalCars)), "Disable All Personal Cars" },
-                { m_Setting.GetOptionDescLocaleID(nameof(Setting.DisableAllPersonalCars)), "Mark every personal car in this category as disabled." },
                 { m_Setting.GetOptionLabelLocaleID(nameof(Setting.EnableAllPersonalCars)), "Enable All Personal Cars" },
-                { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableAllPersonalCars)), "Clear the disabled flag for every personal car." },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableAllPersonalCars)), "Enable every personal car in this category." },
+                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.DisableAllPersonalCars)), "Disable All Personal Cars" },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.DisableAllPersonalCars)), "Disable every personal car in this category." },
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.DisableAllTrains)), "Disable All Trains" },
-                { m_Setting.GetOptionDescLocaleID(nameof(Setting.DisableAllTrains)), "Mark every train in this category as disabled." },
                 { m_Setting.GetOptionLabelLocaleID(nameof(Setting.EnableAllTrains)), "Enable All Trains" },
-                { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableAllTrains)), "Clear the disabled flag for every train." },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableAllTrains)), "Enable every train in this category." },
+                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.DisableAllTrains)), "Disable All Trains" },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.DisableAllTrains)), "Disable every train in this category." },
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.DisableAllTrams)), "Disable All Trams" },
-                { m_Setting.GetOptionDescLocaleID(nameof(Setting.DisableAllTrams)), "Mark every tram in this category as disabled." },
                 { m_Setting.GetOptionLabelLocaleID(nameof(Setting.EnableAllTrams)), "Enable All Trams" },
-                { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableAllTrams)), "Clear the disabled flag for every tram." },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableAllTrams)), "Enable every tram in this category." },
+                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.DisableAllTrams)), "Disable All Trams" },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.DisableAllTrams)), "Disable every tram in this category." },
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.DisableAllSubways)), "Disable All Subways" },
-                { m_Setting.GetOptionDescLocaleID(nameof(Setting.DisableAllSubways)), "Mark every subway in this category as disabled." },
                 { m_Setting.GetOptionLabelLocaleID(nameof(Setting.EnableAllSubways)), "Enable All Subways" },
-                { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableAllSubways)), "Clear the disabled flag for every subway." },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.EnableAllSubways)), "Enable every subway in this category." },
+                { m_Setting.GetOptionLabelLocaleID(nameof(Setting.DisableAllSubways)), "Disable All Subways" },
+                { m_Setting.GetOptionDescLocaleID(nameof(Setting.DisableAllSubways)), "Disable every subway in this category." },
             };
 
             foreach (var category in PrefabCatalog.Categories)
@@ -192,7 +194,7 @@ namespace AssetDisabler
                 {
                     dict[m_Setting.GetOptionLabelLocaleID(entry.SettingPropertyName)] = entry.DisplayName;
                     dict[m_Setting.GetOptionDescLocaleID(entry.SettingPropertyName)] =
-                        $"Disable the vanilla prefab \"{entry.PrefabName}\".";
+                        $"When unchecked, the vanilla prefab \"{entry.PrefabName}\" will be removed at game start.";
                 }
             }
 
